@@ -672,7 +672,7 @@ local function FillHeat()
 end
 game:GetService("RunService").RenderStepped:Connect(change_color)
 plr.Character.ChildAdded:Connect(function(v)
-        if v.Name == 'Grabbing' then
+        if v.Name == 'Hitting' then
                 while v.Parent == plr.Character do
                         if status.Heat.Value ~= 100 then
                                 FillHeat()
@@ -793,7 +793,7 @@ game.UserInputService.InputBegan:Connect(function(key)
                                         return
                                 
                                 end
-                                dashcooldown = true
+                                dashcooldown = false
                                 local id = "rbxassetid://10928237540"
                                 local anim = Instance.new("Animation")
                                 anim.AnimationId = id
