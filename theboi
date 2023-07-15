@@ -672,9 +672,9 @@ local function FillHeat()
 end
 game:GetService("RunService").RenderStepped:Connect(change_color)
 plr.Character.ChildAdded:Connect(function(v)
-        if v.Name == 'Hitting' then
+        if v.Name == 'Grabbing' then
                 while v.Parent == plr.Character do
-                        if status.Heat.Value ~= 100 then
+                        if status.Heat.Value ~= 120 then
                                 FillHeat()
                         end
                         task.wait(0.1)
